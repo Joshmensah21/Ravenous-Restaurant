@@ -1,16 +1,12 @@
-
-import React from 'react';
 import './App.css';
+import Business from './components/Business';
 
 function App() {
-	return (
-		<div className="App">
-			<p>Joshua Mensah is J Muse</p>
-			<p>learn react</p>
-		</div>
-	);
+  return (
+    <div className="App">
+      <Business />
+    </div>
+  );
 }
 
 export default App;
-
-
