@@ -1,0 +1,107 @@
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
+.hero{
+    display: flex;
+    align-items: center;
+
+    flex-direction: column;
+
+    min-height: 520px;
+    width: 100%;
+
+    background-image: url("../images/ravenous-restaurant-img.jpg");
+    background-size: 1500px;
+    background-repeat: no-repeat;
+    background-position: -16px 50px;
+}
+    .titleContainer{
+        width: 100%;
+        height: 56px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        background-color: #cfa44e;
+    }
+        .title{
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            color: white;
+        }
+        
+    .filterContainer{
+        margin-top: 120px;
+        width: 838px;
+        gap: 120px;
+
+        display: flex;
+        justify-content: center;
+        
+    }
+        .filterTitle{
+            color: white;
+        }
+
+        .filterBtn{
+
+            background: none;
+            border: none;
+            cursor: pointer;
+            
+           
+            max-width: 64px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+    .hr{
+        border: none;
+        border-top: solid 1px white;
+
+        width: 552px;
+        margin-top: -8px;
+        margin-bottom: 40px;
+    }
+    .searchContainer{
+        display: flex;
+        gap: 40px;
+
+        margin-bottom: 40px;
+    }
+        .searchBtn{
+            width: 400px;
+            height: 40px;
+
+            border: none;
+            border-radius: 4px;
+            padding-left: 16px;
+
+            outline: none;
+        }
+    .letsGoBtn{
+        margin-bottom: 96px;
+        width: 136px;
+        height: 48px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        background-color: #C39948;
+        color: white;
+        border: none;
+        border-radius: 4px;
+    }
+        .letsGoText{
+            font-size: large;
+            font-family: 'Work Sans', sans-serif;
+            font-weight: 600;
+
+            cursor: pointer;
+        }

@@ -1,10 +1,12 @@
 import './App.css';
-import Business from './components/Business';
+import { BusinessList } from '../src/components/BusinessList';
+import { SearchBar } from "./components/Hero"
 
 function App() {
   return (
     <div className="App">
-      <Business />
+      <SearchBar/>
+      <BusinessList/>
     </div>
   );
 }

@@ -1,21 +1,23 @@
-export default function Business() {
+import "../css modules/Business.module.css" 
+
+export default function Business({business}) {
   return (
     <div className="Business">
-      <img src="" alt="Business" />
-
-      <h2>Business Name</h2>
+      <img src= {business.imageSrc} alt="Business" />
+      <h2>{business.name}</h2>
 
       <div className="Business-address">
-        <p>Business Address</p>
-        <p>City</p>
-        <p>State</p>
-        <p>Zip Code</p>
+        <p>{business.address}</p>
+        <p>{business.city}</p>
+        <p>{business.state}</p>
+        <p>{business.zipCode}</p>
       </div>
 
       <div className="Business-reviews">
-        <h3 className="rating">Rating: 5 stars</h3>
-        <p>120 reviews</p>
+        <h3 className="rating">{business.rating}</h3>
+        <p>{business.reviewCount}</p>
       </div>
     </div>
   );
 }
+ 
