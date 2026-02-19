@@ -34,31 +34,59 @@ body{
         
     .filterContainer{
         margin-top: 120px;
-        width: 838px;
-        gap: 120px;
-
+        max-width: 600px;
+        width: 100%;
+        gap: 0px;
         display: flex;
-        justify-content: center;
+        justify-content: space-between;
         
     }
-        .filterTitle{
-            color: white;
-        }
 
         .filterBtn{
 
             background: none;
             border: none;
             cursor: pointer;
-            
-           
-            max-width: 64px;
-
+    
             display: flex;
             justify-content: center;
             align-items: center;
+            flex: 1;
+            flex-direction: column;
+
+            color: white;
+
+            margin-bottom: 32px;
+            border-bottom: solid 1px white;
 
         }
+
+            .filterBtn:hover {
+                opacity: 0.7;
+                transition: opacity 0.2s ease;
+            }
+            .active {
+                opacity: 0.7;
+                color: #F0C36C;
+                border-bottom: solid 1px #F0C36C;
+                transition: opacity 0.2s ease;
+            }
+
+            .filterTitle{
+                font-family: 'Work Sans', sans-serif;
+                font-size: 15px;
+                
+                text-align: center;
+                white-space: normal;
+                word-break: break-word;
+
+                color: inherit;
+                width: 80px;
+
+                margin-bottom: 10px;
+
+                
+            }
 
     .hr{
         border: none;

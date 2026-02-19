@@ -1,11 +1,11 @@
 import './App.css';
 import { BusinessList } from '../src/components/BusinessList';
-import { SearchBar } from "./components/Hero"
+import { HeroSection } from "./components/Hero"
 
 function App() {
   return (
     <div className="App">
-      <SearchBar/>
+      <HeroSection/>
       <BusinessList/>
     </div>
   );

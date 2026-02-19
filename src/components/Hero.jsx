@@ -1,21 +1,35 @@
 import styles from "../css modules/Hero.module.css"
+import { useState } from "react";
 
-const bestMatchBtn = document.querySelector(`.${styles.bestMatch}`);
-console.log(bestMatchBtn);
+function FilterButton ({ label, isActive, onClick }){
+    return(
+            <li className= {`${styles.filterBtn} ${isActive? styles.active : ""}`} onClick={onClick}>
+                <h3 className = {styles.filterTitle}>{label}</h3>
+            </li>
+        
+    )
+}
 
-export function SearchBar (){
-return(
+export function HeroSection (){
+    const [activeFilter, updateFilterState ]= useState("bestMatch"); 
+    return(
     <div>
         <section className={styles.hero}>
             <div className={styles.titleContainer}>
                 <h1 className={styles.title}>ravenous</h1>
             </div>
             <div className={styles.filterContainer}>
-                <button className={styles.filterBtn}><h3 className={`${styles.filterTitle} ${styles.bestMatch}`}>Best Match</h3></button>
-                <button className={styles.filterBtn}><h3 className={styles.filterTitle}>Highest Rated</h3></button>
-                <button className={styles.filterBtn}><h3 className={styles.filterTitle}>Most Reviewed</h3></button>
+                <FilterButton 
+                    label = "Best Match" isActive = {activeFilter === "bestMatch"} onClick = {() => updateFilterState("bestMatch")}
+                />
+                <FilterButton 
+                    label = "Highest Rated" isActive = {activeFilter === "highestRated"} onClick = {() => updateFilterState("highestRated")}
+                />
+                <FilterButton 
+                    label = "Most Reviewed" isActive = {activeFilter === "mostReviewed"} onClick = {() => updateFilterState("mostReviewed")}
+                />
             </div>
-            <hr className = {styles.hr}></hr>
+            {/*<hr className = {styles.hr}></hr>*/}
             <div className={styles.searchContainer}>
                 <input className={styles.searchBtn} placeholder="Search businesses"></input>
                 <input className={styles.searchBtn} placeholder="Where?"></input>
