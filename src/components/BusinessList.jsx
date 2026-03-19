@@ -1,13 +1,12 @@
-import {businessesArr} from "../data/businesses.js"
-import Business from "./Business.jsx"
 import "../css modules/BusinessList.module.css" 
+import {Business} from "./Business.jsx"
 
-export function BusinessList (){
+export function BusinessList ({businesses}){
 
-return(
-    businessesArr.map((business)=>{
-        return <Business business={business}/>
+return businesses.map((business)=>{
+    return <div>
+            <Business business={business}/>
+        </div>
     })
-)
-
 }
+

@@ -1,6 +1,6 @@
 import "../css modules/Business.module.css" 
 
-export default function Business({business}) {
+export function Business({business}) {
   return (
     <div className="Business">
       <img src= {business.imageSrc} alt="Business" />
