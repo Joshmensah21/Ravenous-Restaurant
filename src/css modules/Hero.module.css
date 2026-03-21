@@ -65,7 +65,7 @@ body{
                 opacity: 0.7;
                 transition: opacity 0.2s ease;
             }
-            .active {
+            .filterActive {
                 opacity: 0.7;
                 color: #F0C36C;
                 border-bottom: solid 1px #F0C36C;
@@ -125,11 +125,31 @@ body{
         color: white;
         border: none;
         border-radius: 4px;
+
+        font-family: 'Work Sans', sans-serif;
+        font-size: 16px;
+        font-weight: bold;
+
+        transform: scale(1);
+
+        cursor: pointer;
     }
+        .letsGoBtnActive{
+            background-color: #8d723b;
+
+            width: 134px;
+            height: 46px;
+
+            font-family: 'Work Sans', sans-serif;
+            font-size: 16px;
+            font-weight: bold;
+
+            transform: scale(0.97);
+
+        }
         .letsGoText{
             font-size: large;
             font-family: 'Work Sans', sans-serif;
             font-weight: 600;
 
-            cursor: pointer;
         }
