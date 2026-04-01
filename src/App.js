@@ -1,11 +1,11 @@
 import './App.css';
-import { HeroSection } from "./components/Hero"
+import { SearchBar } from "./components/SearchBar.jsx"
 import { BusinessList } from "./components/BusinessList.jsx"
 
 function App() {
   return (
     <div className="App">
-      <HeroSection/>
+      <SearchBar/>
       <BusinessList businesses={businessesArr} />
     </div>
   );
@@ -22,7 +22,7 @@ const businessesArr = [
     city: "Foodmania",
     state: "NY",
     zipCode: "10101",
-    category: "Italian",
+    category: "Italian", 
     rating: 4.3,
     reviewCount: 72
   },

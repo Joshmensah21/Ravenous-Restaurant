@@ -101,6 +101,7 @@ body{
         gap: 40px;
 
         margin-bottom: 40px;
+        
     }
         .searchBtn{
             width: 400px;
@@ -134,6 +135,7 @@ body{
 
         cursor: pointer;
     }
+     
         .letsGoBtnActive{
             background-color: #8d723b;
 
@@ -147,6 +149,11 @@ body{
             transform: scale(0.97);
 
         }
+
+        .letsGoBtnHover{
+            background-color: #ee1a1a; /*#ad8941;*/
+        }
+
         .letsGoText{
             font-size: large;
             font-family: 'Work Sans', sans-serif;

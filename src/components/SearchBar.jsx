@@ -2,11 +2,14 @@ import styles from "../css modules/Hero.module.css"
 import { useState } from "react";
 
 //PARENT COMPONENT (Cooking Pot)
-export function HeroSection (){
-    const [activeFilter, updateFilterState ] = useState("bestMatch"); 
+export function SearchBar (){
+    const [activeFilter, updateFilterState ] = useState("bestMatch");
+    const [searchTerm, updateSearchTerm] = useState ("Search businesses");
+    const [location, updateLocation] = useState ("Where?")
     const [normalCTA, updateCTA] = useState("not pressed");
+
     const handleClick = () => {updateCTA("pressed"); setTimeout(() => updateCTA("not pressed"), 250)}; 
-    {console.log ( "BEFORE: " + normalCTA)}
+
     return(
     <div className={styles.activeLayer} isActive = {normalCTA === "pressed"}> {/*trying to implement cursor: progress feature across whole page when a CTA button is clicked */}
         <section className={styles.hero}>
@@ -30,15 +33,15 @@ export function HeroSection (){
                     onClick = {() => updateFilterState("mostReviewed")}
                 />
             </div>
-            {/*<hr className = {styles.hr}></hr>*/}
+            
             <div className={styles.searchContainer}>
-                <input className={styles.searchBtn} placeholder="Search businesses"></input>
-                <input className={styles.searchBtn} placeholder="Where?"></input>
+                <input className={styles.searchBtn} value={searchTerm} onChange = {termEventHandler} placeholder="Search businesses"></input>
+                <input className={styles.searchBtn} value={location} onChange = {locationEventHandler} placeholder="Where?"></input>
             </div>
             <CTAButton 
                 isClicked = {normalCTA === "pressed"} 
                 onClick = {handleClick}
-
+                
             />
             {console.log ( "AFTER: " + normalCTA)}
             
@@ -46,6 +49,16 @@ export function HeroSection (){
     </div>
     
 )
+
+    function termEventHandler (event){
+        const newTerm = event.target.value;
+        updateSearchTerm(newTerm);
+    }
+
+    function locationEventHandler (event){
+        const newLocation = event.target.value;
+        updateLocation(newLocation);
+    }
 
 }
 
@@ -60,9 +73,9 @@ function FilterButton ({ label, isActive, onClick }){
     )
 }
 
-function CTAButton ({isClicked, onClick}){
+function CTAButton ({isClicked, onClick, isHovered, onHover}){
     
     return(
-            <button className = {`${styles.letsGoBtn} ${isClicked?  styles.letsGoBtnActive : ""}`} onClick={onClick}>Let's Go</button>
+            <button className = {`${styles.letsGoBtn} ${isClicked?  styles.letsGoBtnActive : ""} ${isHovered? styles.letsGoBtnHover : ""}`} onClick={onClick} mouseOver={onHover}>Let's Go</button>
     )
 }
