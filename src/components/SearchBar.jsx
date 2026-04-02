@@ -3,13 +3,30 @@ import { useState } from "react";
 
 //PARENT COMPONENT (Cooking Pot)
 export function SearchBar (){
-    const [activeFilter, updateFilterState ] = useState("bestMatch");
+    const [filter, updateFilterState] = useState("bestMatch");
     const [searchTerm, updateSearchTerm] = useState ("Search businesses");
     const [location, updateLocation] = useState ("Where?")
     const [normalCTA, updateCTA] = useState("not pressed");
 
-    const handleClick = () => {updateCTA("pressed"); setTimeout(() => updateCTA("not pressed"), 250)}; 
+    const activeFilterHandler = (value) => {
+        updateFilterState(value);
+    }
 
+    const handleClick = () => {
+        updateCTA("pressed"); 
+        setTimeout(() => updateCTA("not pressed"), 250);
+    }; 
+
+    
+    function termEventHandler (event){
+        const newTerm = event.target.value;
+        updateSearchTerm(newTerm);
+    }
+
+    function locationEventHandler (event){
+        const newLocation = event.target.value;
+        updateLocation(newLocation);
+    }
     return(
     <div className={styles.activeLayer} isActive = {normalCTA === "pressed"}> {/*trying to implement cursor: progress feature across whole page when a CTA button is clicked */}
         <section className={styles.hero}>
@@ -19,18 +36,21 @@ export function SearchBar (){
             <div className={styles.filterContainer}>
                 <FilterButton 
                     label = "Best Match" 
-                    isActive = {activeFilter === "bestMatch"} 
-                    onClick = {() => updateFilterState("bestMatch")}
+                    value = "bestMatch"
+                    isActive = {filter === "bestMatch"}
+                    onClick = {activeFilterHandler}
                 />
                 <FilterButton 
                     label = "Highest Rated" 
-                    isActive = {activeFilter === "highestRated"} 
-                    onClick = {() => updateFilterState("highestRated")}
+                    value = "highestRated"
+                    isActive = {filter === "highestRated"} 
+                    onClick = {activeFilterHandler}
                 />
                 <FilterButton 
                     label = "Most Reviewed" 
-                    isActive = {activeFilter === "mostReviewed"} 
-                    onClick = {() => updateFilterState("mostReviewed")}
+                    value = "mostReviewed"
+                    isActive = {filter === "mostReviewed"}
+                    onClick = {activeFilterHandler}
                 />
             </div>
             
@@ -50,23 +70,13 @@ export function SearchBar (){
     
 )
 
-    function termEventHandler (event){
-        const newTerm = event.target.value;
-        updateSearchTerm(newTerm);
-    }
-
-    function locationEventHandler (event){
-        const newLocation = event.target.value;
-        updateLocation(newLocation);
-    }
-
 }
 
 //CHILD COMPONENTS (ingredients)
 
-function FilterButton ({ label, isActive, onClick }){
+function FilterButton ({ label, value, isActive, onClick }){
     return(
-            <li className = {`${styles.filterBtn} ${isActive? styles.filterActive : ""}`} onClick={onClick}>
+            <li className = {`${styles.filterBtn} ${isActive ? styles.filterActive:""}`} onClick={()=> onClick(value)}>
                 <h3 className = {styles.filterTitle}>{label}</h3>
             </li>
         
