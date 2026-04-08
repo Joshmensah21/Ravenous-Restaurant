@@ -4,8 +4,8 @@ import { useState } from "react";
 //PARENT COMPONENT (Cooking Pot)
 export function SearchBar (){
     const [filter, updateFilterState] = useState("bestMatch");
-    const [searchTerm, updateSearchTerm] = useState ("Search businesses");
-    const [location, updateLocation] = useState ("Where?")
+    const [searchTerm, updateSearchTerm] = useState ("");
+    const [location, updateLocation] = useState ("")
     const [normalCTA, updateCTA] = useState("not pressed");
 
     const activeFilterHandler = (value) => {
@@ -19,8 +19,8 @@ export function SearchBar (){
 
     
     function termEventHandler (event){
-        const newTerm = event.target.value;
-        updateSearchTerm(newTerm);
+        const userInput = event.target.value;
+        updateSearchTerm(userInput);
     }
 
     function locationEventHandler (event){
@@ -55,8 +55,16 @@ export function SearchBar (){
             </div>
             
             <div className={styles.searchContainer}>
-                <input className={styles.searchBtn} value={searchTerm} onChange = {termEventHandler} placeholder="Search businesses"></input>
-                <input className={styles.searchBtn} value={location} onChange = {locationEventHandler} placeholder="Where?"></input>
+                <input 
+                    className={styles.searchBtn} 
+                    value={searchTerm} 
+                    onChange = {termEventHandler} 
+                    placeholder="Search businesses"></input>
+                <input 
+                    className={styles.searchBtn} 
+                    value={location} 
+                    onChange = {locationEventHandler} 
+                    placeholder="Where?"></input>
             </div>
             <CTAButton 
                 isClicked = {normalCTA === "pressed"} 
