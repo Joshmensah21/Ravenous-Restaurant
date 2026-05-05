@@ -1,4 +1,4 @@
-import styles from "../css modules/Hero.module.css"
+import styles from "../css modules/SearchBar.module.css"
 import { useState } from "react";
 
 //PARENT COMPONENT (Cooking Pot)
@@ -25,12 +25,12 @@ export function SearchBar (){
     function searchBtnHandler (event){
         event.preventDefault()
         updateCTA("pressed"); 
-        setTimeout(() => updateCTA("not pressed"), 250);
+        setTimeout(() => updateCTA("not pressed"), 300); 
         console.log(`Searching Yelp with ${searchTerm}, ${location}, ${filter}`);
     }
 
     return(
-        <div className={styles.activeLayer} isActive = {normalCTA === "pressed"}> {/*trying to implement cursor: progress feature across whole page when a CTA button is clicked */}
+        <div className={styles.activeLayer} style = {{cursor: normalCTA === "pressed" ? "progress" : "auto"}}> {/*trying to implement cursor: progress feature across whole page when a CTA button is clicked */}
             <section className={styles.hero}>
                 <div className={styles.titleContainer}>
                     <h1 className={styles.title}>ravenous</h1>

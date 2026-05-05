@@ -2,6 +2,12 @@ import './App.css';
 import { SearchBar } from "./components/SearchBar.jsx"
 import { BusinessList } from "./components/BusinessList.jsx"
 
+import pizzanos from "./images/pizzanos.png";
+import pizzaYouth from "./images/pizza-youth.webp";
+import laCucaracha from "./images/la-cucaracha-mexican-grill.jpg";
+import misterBurger from "./images/mister-burger.jpg";
+import grillmate from "./images/grillmate.jpg";
+
 function App() {
   return (
     <div className="App">
@@ -16,7 +22,7 @@ export default App;
 
 const businessesArr = [
   {
-    imageSrc: "./images/pizzanos.png",
+    imageSrc: pizzanos,
     name: "Pizzanos",
     address: "1212 Marble Street",
     city: "Foodmania",
@@ -27,7 +33,7 @@ const businessesArr = [
     reviewCount: 72
   },
   {
-    imageSrc: "./images/pizza-youth.webp",
+    imageSrc: pizzaYouth,
     name: "Pizza Youth",
     address: "1406 Pennington Lane",
     city: "Houston",
@@ -38,7 +44,7 @@ const businessesArr = [
     reviewCount: 112
   },
   {
-    imageSrc: "./images/la-cucaracha-mexican-grill.jpg",
+    imageSrc: laCucaracha,
     name: "La Cucaracha Mexican Grill",
     address: "9221 Holders Grove",
     city: "San Diego",
@@ -49,7 +55,7 @@ const businessesArr = [
     reviewCount: 83
   },
   {
-    imageSrc: "./images/mister-burger.jpg",
+    imageSrc: misterBurger,
     name: "Mister Burger",
     address: "3426 Quarter Pounder Court",
     city: "DC",
@@ -60,7 +66,7 @@ const businessesArr = [
     reviewCount: 70
   },
   {
-    imageSrc: "./images/grillmate.jpg",
+    imageSrc: grillmate,
     name: "Grillmate",
     address: "2450 Bacon Lane",
     city: "Nevada",
