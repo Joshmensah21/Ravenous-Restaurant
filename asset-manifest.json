@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/ravenous-restaurant/static/css/main.5c187467.css",
+    "main.js": "/ravenous-restaurant/static/js/main.e8539e7e.js",
+    "static/media/ravenous-restaurant-img.jpg": "/ravenous-restaurant/static/media/ravenous-restaurant-img.5d22362af7aa3252eb5b.jpg",
+    "static/media/grillmate.jpg": "/ravenous-restaurant/static/media/grillmate.e81bf6904015c8380e2e.jpg",
+    "static/media/pizza-youth.webp": "/ravenous-restaurant/static/media/pizza-youth.e5ff0a5fccc6fb42a723.webp",
+    "static/media/la-cucaracha-mexican-grill.jpg": "/ravenous-restaurant/static/media/la-cucaracha-mexican-grill.127b135988418ee99588.jpg",
+    "static/media/mister-burger.jpg": "/ravenous-restaurant/static/media/mister-burger.9cafa39f603aefe372be.jpg",
+    "index.html": "/ravenous-restaurant/index.html",
+    "main.5c187467.css.map": "/ravenous-restaurant/static/css/main.5c187467.css.map",
+    "main.e8539e7e.js.map": "/ravenous-restaurant/static/js/main.e8539e7e.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5c187467.css",
+    "static/js/main.e8539e7e.js"
+  ]
+}
