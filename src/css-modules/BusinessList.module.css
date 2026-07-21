@@ -1,0 +1,23 @@
+.parentContainer{
+    display: flex;
+    justify-content: center;
+}
+
+    .listContainer{
+        margin-top: 48px;
+
+        padding-bottom: 24px;
+
+        width: 1168px;
+
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 88px;
+
+        /*border: solid 2px red;*/
+
+    }
+
+
+        /*DON'T FORGET TO PUSH TO GIT WITH SPECIFIC MESSAGE*/

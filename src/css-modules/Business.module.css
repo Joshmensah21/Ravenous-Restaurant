@@ -1,0 +1,59 @@
+
+.businessContainer{
+            height: 544px;
+            max-width: 302px;
+            overflow: hidden;
+            
+            /*border: solid 2px blue;*/
+}
+
+    .businessImg{
+        width: 300px;
+    }
+
+    .businessName{
+        margin-top: 8px;
+        margin-bottom: 16px;
+
+        /*border: solid 2px green;*/
+
+    }
+
+    .businessBottom{
+        display: flex;
+        gap: 16px;
+
+        
+        align-items: flex-start;
+        /*border: solid 2px black;*/
+    }
+        .businessInfo{
+            width: 212px;
+            
+            /*border: solid 2px pink;*/
+            
+        }
+            .businessAdd{
+            margin-top: 0px;
+            /*border: solid 2px red;*/
+            }
+
+            .businessReviews{
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                
+                max-width: 220px;
+                /*border: solid 2px green;*/
+            }
+
+                .cuisine{
+                    margin-top: 0px;
+                    text-transform: uppercase;
+                    color: #cfa44e;
+                }
+
+                .rating{
+                    margin-top: 0px;
+                    color: #cfa44e;
+                }
