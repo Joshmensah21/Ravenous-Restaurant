@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import styles from "../css-modules/SearchBar.module.css"
+=======
+import styles from "../css modules/SearchBar.module.css"
+>>>>>>> 5df83e935020d7818c1452bfb97cd6984043f208
 import { useState } from "react";
 
 //PARENT COMPONENT (Cooking Pot)
